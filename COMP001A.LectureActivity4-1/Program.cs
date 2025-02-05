@@ -42,13 +42,26 @@ namespace COMP001A.LectureActivity4_1
             }
             double average = sum / grades.Length;
 
-            Console.WriteLine("\nGrades: ");
+            Console.WriteLine("\nGrades: "); // Display grades and average
             foreach (int grade in grades)
             {
-                Console.WriteLine(grade);
+                Console.WriteLine(grade); // Display grades stores in array
             }
             Console.WriteLine($"Average Grade: {average:F2}");
 
+            List<string> studentNames = new List<string>(); // List to store students names
+
+            for (int i = 0; i < 5; i++) // Collects the student's name
+            {
+                Console.Write($"Enter name for student {i + 1}: ");
+                studentNames.Add(Console.ReadLine()); // Add entered name to list of students
+            }
+
+            Console.WriteLine("\nStudent Names: "); // Display student names
+            for (int i = 0; i < studentNames.Count;i++) 
+            {
+                Console.WriteLine($"Student {i + 1}: {studentNames[i]}"); // Display each student name with their index
+            }
         }
     }
 }
