@@ -30,9 +30,18 @@ namespace COMP001A.LectureActivity4_1
                     else
                     {
                         Console.WriteLine("Inavlid input, please enter a valid number.");
-                        grade = -1; // Reset greade to invalid value to re-enter loop
+                        grade = -1; // Reset grade to invalid value to re-enter loop
                     }
+                }
             }
+
+            double sum = 0; // calcuate average grade
+            for (int i = 0; i < grades.Length; i++)
+            { 
+                sum += grades[i]; // add current grade to total sum
+            }
+            double average = sum / grades.Length;
+
         }
     }
 }
