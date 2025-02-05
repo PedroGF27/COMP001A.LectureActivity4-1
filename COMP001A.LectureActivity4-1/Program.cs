@@ -42,6 +42,13 @@ namespace COMP001A.LectureActivity4_1
             }
             double average = sum / grades.Length;
 
+            Console.WriteLine("\nGrades: ");
+            foreach (int grade in grades)
+            {
+                Console.WriteLine(grade);
+            }
+            Console.WriteLine($"Average Grade: {average:F2}");
+
         }
     }
 }
